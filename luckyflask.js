@@ -1,4 +1,4 @@
-/** processForm: get data from form and make AJAX call to our API. */
+//get data from form and make AJAX call to our API. */
 
 function processForm(evt) {
   evt.preventDefault();
@@ -17,12 +17,12 @@ function processForm(evt) {
   });
 }
 
-/** handleResponse: deal with response from our lucky-num API. */
+// handleResponse: deal with response from our lucky-num API. */
 
 function handleResponse(resp) {
   if ("errors" in resp) {
-    // received errors from API:
-    //   for each error, put message next to corresponding field
+    
+    // API errors: put each error in representaive feild
 
     for (let fld in resp.errors) {
       $(`#${fld}-err`).text(resp.errors[fld]);
@@ -30,8 +30,7 @@ function handleResponse(resp) {
   }
 
   else {
-    // successful result from API:
-    //   show templated result message
+    // success from API: show templated result message
 
     let {num, year} = resp;
     let msg = `Your lucky number is ${num.num} (${num.fact}).
