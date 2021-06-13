@@ -1,4 +1,4 @@
-//get data from form and make AJAX call to our API. */
+//get data, make AJAX call API. */
 
 function processForm(evt) {
   evt.preventDefault();
@@ -17,7 +17,7 @@ function processForm(evt) {
   });
 }
 
-// handleResponse: deal with response from our lucky-num API. */
+// handleResponse: deal with response from lucky-num API. */
 
 function handleResponse(resp) {
   if ("errors" in resp) {
@@ -30,7 +30,7 @@ function handleResponse(resp) {
   }
 
   else {
-    // success from API: show templated result message
+    // success from API provides result message
 
     let {num, year} = resp;
     let msg = `Your lucky number is ${num.num} (${num.fact}).
