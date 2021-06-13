@@ -30,8 +30,8 @@ function handleResponse(resp) {
   }
 
   else {
-    // successful result from API:
-    //   show templated result message
+    
+    //show success with result message
 
     let {num, year} = resp;
     let msg = `Your lucky number is ${num.num} (${num.fact}).
